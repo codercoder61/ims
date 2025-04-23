@@ -24,7 +24,7 @@ function EditUser() {
               let datas = {
                 idCat : parseInt(param1)
               }
-              const response = await fetch('http://soc-net.info/api/getCategory.php', {
+              const response = await fetch('https://soc-net.info/api/getCategory.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function EditUser() {
               });
           
               if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
+                  throw new Error(`https error! status: ${response.status}`);
               }
           
               const responseData = await response.json();
@@ -86,7 +86,7 @@ function EditUser() {
           }
       
           // Send data as JSON to the PHP script
-          const response = await fetch('http://soc-net.info/api/editCategory.php', {
+          const response = await fetch('https://soc-net.info/api/editCategory.php', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ function EditUser() {
           });
       
           if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
+              throw new Error(`https error! status: ${response.status}`);
           }
       
           const responseData = await response.json();
