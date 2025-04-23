@@ -35,7 +35,7 @@ function Categories() {
         // Send data to PHP via a POST request
         //console.log(id);  // For debugging
     
-        fetch('http://localhost/api/deleteCategory.php', {
+        fetch('http://soc-net.info/api/deleteCategory.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',  // Set content type to JSON
@@ -57,7 +57,7 @@ function Categories() {
         navigate(`/editCategory?id=${id}`);
     };
     useEffect(() => {
-        fetch('http://localhost/api/getCategories.php')
+        fetch('http://soc-net.info/api/getCategories.php')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -89,7 +89,7 @@ function Categories() {
           }
       
           // Send data as JSON to the PHP script
-          const response = await fetch('http://localhost/api/AddCategory.php', {
+          const response = await fetch('http://soc-net.info/api/AddCategory.php', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
