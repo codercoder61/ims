@@ -27,7 +27,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
     product:''
   });
   useEffect(() => {
-                    fetch('http://localhost/api/getProducts.php')
+                    fetch('http://soc-net.info/api/getProducts.php')
                         .then((response) => response.json())
                         .then((data) => {
                             console.log(data);
@@ -86,7 +86,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
         };
 
         // Send the JSON data to the PHP script
-        const response = await fetch('http://localhost/api/FindProduct.php', {
+        const response = await fetch('http://soc-net.info/api/FindProduct.php', {
             method: 'POST',
             body: JSON.stringify(data), // Serialize the data as JSON
             headers: {
@@ -125,7 +125,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
         console.log(key + ': ' + value);
     }  
       // Do not set 'Content-Type' here, as the browser will handle it
-      const response = await fetch('http://localhost/api/AddSale.php', {
+      const response = await fetch('http://soc-net.info/api/AddSale.php', {
         method: 'POST',
         body: data,  // Send data as a JSON object
     });
