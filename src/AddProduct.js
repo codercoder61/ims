@@ -17,7 +17,7 @@ function AddProduct() {
   const [image, setImage] = useState(null);
   const [responseMessage, setResponseMessage] = useState('');
 useEffect(() => {
-        fetch('http://soc-net.info/api/getCategories.php')
+        fetch('https://soc-net.info/api/getCategories.php')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -69,13 +69,13 @@ useEffect(() => {
       console.log(data);
   
       // Do not set 'Content-Type' here, as the browser will handle it
-      const response = await fetch('http://soc-net.info/api/AddProduct.php', {
+      const response = await fetch('https://soc-net.info/api/AddProduct.php', {
         method: 'POST',
         body: data, // Directly send FormData without any headers
       });
   
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`https error! status: ${response.status}`);
       }
   
       const responseData = await response.json();
