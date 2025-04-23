@@ -43,7 +43,7 @@ useEffect(() => {
               let datas = {
                 idProduct : parseInt(param1)
               }
-              const response = await fetch('http://localhost/api/getSale.php', {
+              const response = await fetch('http://soc-net.info/api/getSale.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ useEffect(() => {
     };
 
     try {
-        const response = await fetch('http://localhost/api/editSale.php', {
+        const response = await fetch('http://soc-net.info/api/editSale.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Indicate that we're sending JSON data
