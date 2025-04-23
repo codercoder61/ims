@@ -1,0 +1,30 @@
+#dash div{
+    background-color: #f0f2f6;
+    margin: 20px;
+    width: 150px;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+#dash{
+    top:70px;
+    right:200px;
+position: absolute;
+}
+
+#dash2 div{
+    background-color: #f0f2f6;
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+
+#dash2{
+    top:180px;
+    right:200px;
+position: absolute;
+}

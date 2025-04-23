@@ -1,0 +1,32 @@
+#users{
+    position:absolute;
+    left:250px;
+    width: 80%;
+    top:100px;
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are collapsed into a single border */
+}
+
+/* Styling for table rows (tr) */
+tr {
+    background-color: #f4f4f4; /* Light gray background for rows */
+}
+
+/* Styling for table cells (td) */
+td {
+    padding: 10px; /* Adds space inside the cell */
+    border: 1px solid #ddd; /* Adds a light gray border around cells */
+    text-align: left; /* Aligns text to the left */
+}
+#anel{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position:fixed;
+    left:250px;
+    top:100px;
+}

@@ -1,0 +1,29 @@
+label{
+    font-weight: bold;
+    display: inline-block;
+}
+input[type="submit"]{
+    color:white;
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+#panel{
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+#body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: aliceblue;
+}
+input[type="text"],input[type="password"]{
+    width:90%;
+    margin-bottom: 10px;
+    height: 30px;
+    padding-left: 5px;
+}
