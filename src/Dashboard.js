@@ -23,7 +23,7 @@ function Dashboard() {
     useEffect(() => {
             
         
-            fetch('http://soc-net.info/api/Dashboard.php')
+            fetch('https://soc-net.info/api/Dashboard.php')
             .then((response) => {
                 // Check if the response is okay
                 if (!response.ok) {
