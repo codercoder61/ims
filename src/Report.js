@@ -24,7 +24,7 @@ function Report() {
             date2: date2, // Example end date
         };
     
-        fetch('http://soc-net.info/api/getSalesByDates.php' ,{
+        fetch('https://soc-net.info/api/getSalesByDates.php' ,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
