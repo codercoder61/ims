@@ -27,7 +27,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
     product:''
   });
   useEffect(() => {
-                    fetch('http://soc-net.info/api/getProducts.php')
+                    fetch('https://soc-net.info/api/getProducts.php')
                         .then((response) => response.json())
                         .then((data) => {
                             console.log(data);
@@ -86,7 +86,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
         };
 
         // Send the JSON data to the PHP script
-        const response = await fetch('http://soc-net.info/api/FindProduct.php', {
+        const response = await fetch('https://soc-net.info/api/FindProduct.php', {
             method: 'POST',
             body: JSON.stringify(data), // Serialize the data as JSON
             headers: {
@@ -95,7 +95,7 @@ let formattedDate = currentDate.toISOString().split('T')[0];
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`https error! status: ${response.status}`);
         }
 
         const responseTex = await response.json();  // Get raw response text
@@ -125,13 +125,13 @@ let formattedDate = currentDate.toISOString().split('T')[0];
         console.log(key + ': ' + value);
     }  
       // Do not set 'Content-Type' here, as the browser will handle it
-      const response = await fetch('http://soc-net.info/api/AddSale.php', {
+      const response = await fetch('https://soc-net.info/api/AddSale.php', {
         method: 'POST',
         body: data,  // Send data as a JSON object
     });
   
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`https error! status: ${response.status}`);
       }
   
       const responseData = await response.text();
