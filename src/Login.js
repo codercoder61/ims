@@ -26,7 +26,7 @@ function Login() {
         e.preventDefault();
       
         // Send the data to the PHP script as JSON
-        fetch('http://localhost/api/HandleLogin.php', {
+        fetch('http://soc-net.info/api/HandleLogin.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',  // Set content type to JSON
