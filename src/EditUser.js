@@ -29,7 +29,7 @@ function EditUser() {
                     try {
                   
                       
-                      const response = await fetch('http://localhost/api/getUser.php', {
+                      const response = await fetch('http://soc-net.info/api/getUser.php', {
                           method: 'POST',
                           headers: {
                               'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ function EditUser() {
           }
       
           // Send data as JSON to the PHP script
-          const response = await fetch('http://localhost/api/EditUser.php', {
+          const response = await fetch('http://soc-net.info/api/EditUser.php', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
