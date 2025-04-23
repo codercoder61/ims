@@ -24,7 +24,7 @@ function EditUser() {
               let datas = {
                 idCat : parseInt(param1)
               }
-              const response = await fetch('http://localhost/api/getCategory.php', {
+              const response = await fetch('http://soc-net.info/api/getCategory.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ function EditUser() {
           }
       
           // Send data as JSON to the PHP script
-          const response = await fetch('http://localhost/api/editCategory.php', {
+          const response = await fetch('http://soc-net.info/api/editCategory.php', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
