@@ -47,7 +47,7 @@ function AddUser() {
           }
       
           // Send data as JSON to the PHP script
-          const response = await fetch('http://soc-net.info/api/AddUser.php', {
+          const response = await fetch('https://soc-net.info/api/AddUser.php', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function AddUser() {
           });
       
           if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
+              throw new Error(`https error! status: ${response.status}`);
           }
       
           const responseData = await response.json();
