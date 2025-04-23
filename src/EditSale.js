@@ -43,7 +43,7 @@ useEffect(() => {
               let datas = {
                 idProduct : parseInt(param1)
               }
-              const response = await fetch('http://soc-net.info/api/getSale.php', {
+              const response = await fetch('https://soc-net.info/api/getSale.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ useEffect(() => {
               });
           
               if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
+                  throw new Error(`https error! status: ${response.status}`);
               }
           
               const responseData = await response.json();
@@ -98,7 +98,7 @@ useEffect(() => {
     };
 
     try {
-        const response = await fetch('http://soc-net.info/api/editSale.php', {
+        const response = await fetch('https://soc-net.info/api/editSale.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Indicate that we're sending JSON data
