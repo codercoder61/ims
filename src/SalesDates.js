@@ -40,7 +40,7 @@ function Users() {
         // Send data to PHP via a POST request
         //console.log(id);  // For debugging
     
-        fetch('http://soc-net.info/api/deleteUser.php', {
+        fetch('https://soc-net.info/api/deleteUser.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',  // Set content type to JSON
@@ -62,7 +62,7 @@ function Users() {
         navigate(`/edituser?id=${id}`);
     };
     useEffect(() => {
-        fetch('http://soc-net.info/api/getUsers.php')
+        fetch('https://soc-net.info/api/getUsers.php')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
