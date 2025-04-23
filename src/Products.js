@@ -16,7 +16,7 @@ function Products() {
             category: ''
           });*/ 
           useEffect(() => {
-                  fetch('http://localhost/api/getProducts.php')
+                  fetch('http://soc-net.info/api/getProducts.php')
                       .then((response) => response.json())
                       .then((data) => {
                           console.log(data);
@@ -50,7 +50,7 @@ function Products() {
         // Send data to PHP via a POST request
         //console.log(id);  // For debugging
     
-        fetch('http://localhost/api/deleteProduct.php', {
+        fetch('http://soc-net.info/api/deleteProduct.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',  // Set content type to JSON
