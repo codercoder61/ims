@@ -32,7 +32,7 @@ function AddProduct() {
   const [image, setImage] = useState(null);
   const [responseMessage, setResponseMessage] = useState('');
 useEffect(() => {
-        fetch('http://localhost/api/getCategories.php')
+        fetch('http://soc-net.info/api/getCategories.php')
             .then((response) => response.json())
             .then((data) => {
                 //console.log(data);
@@ -57,7 +57,7 @@ useEffect(() => {
               let datas = {
                 idProduct : parseInt(param1)
               }
-              const response = await fetch('http://localhost/api/getProduct.php', {
+              const response = await fetch('http://soc-net.info/api/getProduct.php', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ useEffect(() => {
       console.log(pair[0] + ': ' + pair[1]);
   }*/
   try {
-    const response = await fetch('http://localhost/api/editProduct.php', {
+    const response = await fetch('http://soc-net.info/api/editProduct.php', {
       method: 'POST',
       body: data, // Send FormData directly
     });
