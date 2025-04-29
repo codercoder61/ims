@@ -38,7 +38,7 @@ function EditUser() {
           
               const responseData = await response.text();
               
-              console.log(response);  // Handle the response data (e.g., display a message)
+              console.log(responseData);  // Handle the response data (e.g., display a message)
               //setResponseMessage("User updated successfully!");
               setFormData({
                 ...formData,
