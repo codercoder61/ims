@@ -36,6 +36,7 @@ function Login() {
         .then(response => response.text())
         .then(data => {
           // Handle response (you can navigate or display the message)
+            console.log(data)
           if(data.message == "Logged in successfully")
           {
             //console.log(11)
