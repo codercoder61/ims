@@ -59,9 +59,9 @@ useEffect(() => {
               //console.log(JSON.parse(responseData)); // Attempt to parse as JSON
               setFormData({
                 ...formData,
-                name: JSON.parse(responseData.name),
-                quantity: JSON.parse(responseData.quantity),
-                total: JSON.parse(responseData.total),
+                name: JSON.parse(responseData).name,
+                quantity: JSON.parse(responseData).quantity,
+                total: JSON.parse(responseData).total,
               });
               //setResponseMessage("User updated successfully!");
              
