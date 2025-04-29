@@ -33,7 +33,7 @@ function Login() {
           },
           body: JSON.stringify(formData),  // Send data as a JSON string
         })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
           // Handle response (you can navigate or display the message)
             console.log(data)
