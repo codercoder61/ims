@@ -36,13 +36,13 @@ function EditUser() {
                   throw new Error(`https error! status: ${response.status}`);
               }
           
-              const responseData = await response.json();
+              const responseData = await response.text();
               
               console.log(response);  // Handle the response data (e.g., display a message)
               //setResponseMessage("User updated successfully!");
               setFormData({
                 ...formData,
-                category: responseData.category,
+                category: JSON.parse(responseData).category,
               });
               
           } catch (error) {
