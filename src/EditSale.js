@@ -55,13 +55,13 @@ useEffect(() => {
                   throw new Error(`https error! status: ${response.status}`);
               }
           
-              const responseData = await response.json();
+              const responseData = await response.text();
               //console.log(JSON.parse(responseData)); // Attempt to parse as JSON
               setFormData({
                 ...formData,
-                name: responseData.name,
-                quantity: responseData.quantity,
-                total: responseData.total,
+                name: JSON.parse(responseData.name),
+                quantity: JSON.parse(responseData.quantity),
+                total: JSON.parse(responseData.total),
               });
               //setResponseMessage("User updated successfully!");
              
