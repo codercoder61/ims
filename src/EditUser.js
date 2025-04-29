@@ -32,7 +32,7 @@ function EditUser() {
                       const response = await fetch('https://soc-net.info/api/getUser.php', {
                           method: 'POST',
                           headers: {
-                              'Content-Type': 'application/json',
+                              'Content-Type': 'application/text',
                           },
                           body: JSON.stringify({ idUser: param1 }),
                       });
@@ -41,8 +41,8 @@ function EditUser() {
                           throw new Error(`https error! status: ${response.status}`);
                       }
                   
-                      const responseData = await response.json();
-                      //console.log(JSON.parse(responseData)); // Attempt to parse as JSON
+                      const responseData = await response.text();
+                      console.log(JSON.parse(responseData)); // Attempt to parse as JSON
                       setFormData({
                         ...formData,
                         username: responseData.username,
