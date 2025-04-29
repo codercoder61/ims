@@ -64,9 +64,9 @@ function Login() {
       <h1 style={{textAlign:'center'}}>Login Panel</h1>
       <h4 style={{textAlign:'center',marginBottom:'10px'}}>Inventory Management System</h4>
       <form onSubmit={handleSubmit} action="" method="POST">
-        <label>Username</label><br/>
+        <label>Username(admin)</label><br/>
         <input id="username" value={formData.username} onChange={handleChange} type="text" placeholder="Username" name="username"/><br/>
-        <label>Password</label><br/>
+        <label>Password(adduser)</label><br/>
         <input id="password" value={formData.password} onChange={handleChange} type="password" placeholder="Password" name="password"/><br/>
         
         <input type="submit" value="Login"/>
