@@ -45,9 +45,9 @@ function EditUser() {
                       console.log(JSON.parse(responseData)); // Attempt to parse as JSON
                       setFormData({
                         ...formData,
-                        username: responseData.username,
-                        password: responseData.password,
-                        role:responseData.role,
+                        username: JSON.parse(responseData).username,
+                        password: JSON.parse(responseData).password,
+                        role:JSON.parse(responseData).role,
                       });
                       console.log(responseData);  // Handle the response data (e.g., display a message)
                       //setResponseMessage("User updated successfully!");
